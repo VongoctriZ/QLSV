@@ -36,6 +36,3 @@ public:
 
 
 #endif // !SINHVIEN_H_
-
-
-
