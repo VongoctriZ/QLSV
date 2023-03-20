@@ -33,8 +33,8 @@ SinhVien::SinhVien(const SinhVien& sv) {
 	NgaySinh = new char[strlen(sv.NgaySinh) + 1];
 
 	strcpy_s(HoTen, strlen(sv.HoTen) + 1, sv.HoTen);
-	strcpy_s(MaSo, strlen(sv.HoTen) + 1, sv.HoTen);
-	strcpy_s(NgaySinh, strlen(sv.HoTen) + 1, sv.HoTen);
+	strcpy_s(MaSo, strlen(sv.MaSo) + 1, sv.MaSo);
+	strcpy_s(NgaySinh, strlen(sv.NgaySinh) + 1, sv.NgaySinh);
 	Marks[0] = sv.Marks[0];
 	Marks[1] = sv.Marks[1];
 	Marks[2] = sv.Marks[2];
@@ -51,8 +51,8 @@ SinhVien& SinhVien::operator = (const SinhVien& sv) {
 		NgaySinh = new char[strlen(sv.NgaySinh) + 1];
 
 		strcpy_s(HoTen, strlen(sv.HoTen) + 1, sv.HoTen);
-		strcpy_s(MaSo, strlen(sv.HoTen) + 1, sv.HoTen);
-		strcpy_s(NgaySinh, strlen(sv.HoTen) + 1, sv.HoTen);
+		strcpy_s(MaSo, strlen(sv.MaSo) + 1, sv.MaSo);
+		strcpy_s(NgaySinh, strlen(sv.NgaySinh) + 1, sv.NgaySinh);
 
 		Marks[0] = sv.Marks[0];
 		Marks[1] = sv.Marks[1];
@@ -69,7 +69,7 @@ double SinhVien::TinhDiemTrungBinh() {
 ostream& operator << (ostream& out, SinhVien& sv) {
 	out << "Ho va ten: " << sv.HoTen << endl;
 	out << "Ma So: " << sv.MaSo << endl;
-	out << "NgaySinh" << sv.NgaySinh << endl;
-	out << "Diem Trung Binh " << fixed << setprecision(2) << sv.TinhDiemTrungBinh() << endl;
+	out << "NgaySinh: " << sv.NgaySinh << endl;
+	out << "Diem Trung Binh: " << fixed << setprecision(2) << sv.TinhDiemTrungBinh() << endl;
 	return out;
 }
